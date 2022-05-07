@@ -1,6 +1,8 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "es2018": true,
+    "es6": true
   },
   "rules": {
     // Override our default settings just for this directory

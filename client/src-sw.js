@@ -32,7 +32,7 @@ registerRoute(
   new StaleWhileRevalidate({
 
     chaceName: 'asset-cache',
-    plugins[
+    plugins:[
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
