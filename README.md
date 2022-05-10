@@ -6,11 +6,6 @@ A text editor that runs in the browser, leveraging IndexDB for storage, is a ful
 
 To install be sure that you have Node installed globally. For a full list of packages installed please see below and follow the links to the various resources.
 
-### NPM Packages Used 
-    1. Express 
-    2. Concurrently
-
-
 ## Usage
 
 To Access use the [!App Link](https://mikes-text-editor.herokuapp.com/)
