@@ -21,12 +21,12 @@ module.exports = () => {
       //plugin that generates our html file and injects the bundles
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'Text Editor'
+        title: 'JATE'
       }),
 
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: '.src-sw.js'
+        swDest: 'src-sw.js'
       }),
 
       new WebpackPwaManifest({

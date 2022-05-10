@@ -28,15 +28,18 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 //setting up the asset cache
 registerRoute(
+  //check if req destination include sa style or script or worker
   ({request}) => ['style', 'script', 'worker'].includes(request.destination),
-  new StaleWhileRevalidate({
-
-    chaceName: 'asset-cache',
-    plugins:[
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-    ]
-  })
+    // new CacheFirst()
+    new StaleWhileRevalidate({
+      // Name of the cache storage.
+      cacheName: 'asset-cache',
+      plugins: [
+        // This plugin will cache responses with these headers to a maximum-age of 30 days
+        new CacheableResponsePlugin({
+          statuses: [0, 200],
+        }),
+      ],
+    })
 
 );
